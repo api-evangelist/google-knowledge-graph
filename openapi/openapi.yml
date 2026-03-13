@@ -1,0 +1,152 @@
+openapi: 3.1.0
+info:
+  title: Google Knowledge Graph Search API
+  description: >-
+    The Google Knowledge Graph Search API allows developers to search for
+    entities (people, places, things) in the Google Knowledge Graph and
+    retrieve structured data about them in JSON-LD format conforming to
+    schema.org standards.
+  version: 1.0.0
+  contact:
+    name: Google
+    url: https://developers.google.com/knowledge-graph
+servers:
+  - url: https://kgsearch.googleapis.com/v1
+paths:
+  /entities:search:
+    get:
+      operationId: searchEntities
+      summary: Search Entities
+      description: >-
+        Searches the Knowledge Graph for entities that match the given
+        constraints.
+      parameters:
+        - name: key
+          in: query
+          required: true
+          description: API key.
+          schema:
+            type: string
+        - name: query
+          in: query
+          description: A literal string to search for in the Knowledge Graph.
+          schema:
+            type: string
+        - name: ids
+          in: query
+          description: A list of entity IDs to search for.
+          schema:
+            type: array
+            items:
+              type: string
+        - name: languages
+          in: query
+          description: The list of language codes (ISO 639) to run the query with.
+          schema:
+            type: array
+            items:
+              type: string
+        - name: types
+          in: query
+          description: Restricts returned entities to those of the specified types.
+          schema:
+            type: array
+            items:
+              type: string
+        - name: limit
+          in: query
+          description: Limits the number of entities returned (max 500, default 20).
+          schema:
+            type: integer
+            default: 20
+            maximum: 500
+        - name: prefix
+          in: query
+          description: Enables prefix (substring) matching against entity names and aliases.
+          schema:
+            type: boolean
+        - name: indent
+          in: query
+          description: Enables indenting of JSON results.
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: key
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        '@context':
+          type: object
+        '@type':
+          type: string
+          const: ItemList
+        itemListElement:
+          type: array
+          items:
+            $ref: '#/components/schemas/EntitySearchResult'
+    EntitySearchResult:
+      type: object
+      properties:
+        '@type':
+          type: string
+          const: EntitySearchResult
+        result:
+          $ref: '#/components/schemas/Entity'
+        resultScore:
+          type: number
+          description: An indicator of how well the entity matched the request.
+    Entity:
+      type: object
+      properties:
+        '@id':
+          type: string
+          description: The canonical URI for the entity.
+        name:
+          type: string
+          description: The name of the entity.
+        '@type':
+          type: array
+          items:
+            type: string
+          description: The schema.org types of the entity.
+        description:
+          type: string
+          description: A short description of the entity.
+        image:
+          type: object
+          properties:
+            contentUrl:
+              type: string
+              format: uri
+            url:
+              type: string
+              format: uri
+        detailedDescription:
+          type: object
+          properties:
+            articleBody:
+              type: string
+            url:
+              type: string
+              format: uri
+            license:
+              type: string
+              format: uri
+        url:
+          type: string
+          format: uri
+          description: The official website URL for the entity.
+security:
+  - ApiKeyAuth: []

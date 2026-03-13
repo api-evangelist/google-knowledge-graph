@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "kg": "https://kgsearch.googleapis.com/v1/",
+    "Thing": "schema:Thing",
+    "Person": "schema:Person",
+    "Place": "schema:Place",
+    "Organization": "schema:Organization",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "image": "schema:image",
+    "sameAs": "schema:sameAs",
+    "detailedDescription": "schema:description",
+    "identifier": "schema:identifier",
+    "ItemList": "schema:ItemList",
+    "itemListElement": "schema:itemListElement",
+    "resultScore": "kg:resultScore"
+  }
+}

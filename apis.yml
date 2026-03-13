@@ -1,0 +1,46 @@
+name: Google Knowledge Graph Search API
+description: >-
+  The Google Knowledge Graph Search API allows developers to search for
+  entities (people, places, things) in the Google Knowledge Graph and retrieve
+  structured data about them in JSON-LD format conforming to schema.org
+  standards. Results include names, descriptions, images, and detailed
+  descriptions with relevance scoring.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/google-knowledge-graph/refs/heads/main/apis.yml
+created: '2026-03-13'
+modified: '2026-03-13'
+specificationVersion: '0.18'
+tags:
+  - Knowledge Graph
+  - Entities
+  - Semantic Search
+  - Linked Data
+  - Schema.org
+  - Google
+apis:
+  - name: Google Knowledge Graph Search API
+    description: >-
+      Search for entities in the Google Knowledge Graph and retrieve structured
+      data in JSON-LD format, including names, descriptions, images, types,
+      and relevance scores.
+    humanURL: https://developers.google.com/knowledge-graph
+    baseURL: https://kgsearch.googleapis.com/v1
+    properties:
+      - type: OpenAPI
+        url: openapi/openapi.yml
+      - type: JSONSchema
+        url: json-schema/Entity.json
+    tags:
+      - Knowledge Graph
+      - Entities
+      - Search
+common:
+  - type: GettingStarted
+    url: https://developers.google.com/knowledge-graph/how-tos/search-widget
+  - type: Pricing
+    url: https://developers.google.com/knowledge-graph
+  - type: JSON-LD
+    url: json-ld/context.jsonld
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

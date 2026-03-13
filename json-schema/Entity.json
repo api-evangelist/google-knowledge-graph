@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Entity.json",
+  "title": "Google Knowledge Graph Entity",
+  "description": "An entity from the Google Knowledge Graph.",
+  "type": "object",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "description": "The canonical URI for the entity."
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the entity."
+    },
+    "@type": {
+      "type": "array",
+      "description": "The schema.org types of the entity.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "type": "string",
+      "description": "A short description of the entity."
+    },
+    "image": {
+      "type": "object",
+      "description": "An image associated with the entity.",
+      "properties": {
+        "contentUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "detailedDescription": {
+      "type": "object",
+      "description": "A detailed description of the entity.",
+      "properties": {
+        "articleBody": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "license": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The official website URL for the entity."
+    }
+  }
+}
