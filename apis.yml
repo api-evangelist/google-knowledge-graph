@@ -1,5 +1,5 @@
 aid: google-knowledge-graph
-name: Google Knowledge Graph Search API
+name: Google Knowledge Graph Search
 description: >-
   The Google Knowledge Graph Search API allows developers to search for
   entities (people, places, things) in the Google Knowledge Graph and retrieve
