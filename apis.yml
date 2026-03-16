@@ -1,3 +1,4 @@
+aid: google-knowledge-graph
 name: Google Knowledge Graph Search API
 description: >-
   The Google Knowledge Graph Search API allows developers to search for
@@ -8,8 +9,9 @@ description: >-
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-knowledge-graph/refs/heads/main/apis.yml
 created: '2026-03-13'
-modified: '2026-03-13'
-specificationVersion: '0.18'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+type: Index
 tags:
   - Knowledge Graph
   - Entities
@@ -25,20 +27,38 @@ apis:
       and relevance scores.
     humanURL: https://developers.google.com/knowledge-graph
     baseURL: https://kgsearch.googleapis.com/v1
-    properties:
-      - type: OpenAPI
-        url: openapi/openapi.yml
-      - type: JSONSchema
-        url: json-schema/Entity.json
     tags:
       - Knowledge Graph
       - Entities
       - Search
+    properties:
+      - type: Documentation
+        url: https://developers.google.com/knowledge-graph/reference/rest/v1
+      - type: OpenAPI
+        url: openapi/openapi.yml
+      - type: Authentication
+        url: https://developers.google.com/knowledge-graph/how-tos/authorizing
+      - type: Getting Started
+        url: https://developers.google.com/knowledge-graph/how-tos/search-widget
+      - type: JSONSchema
+        url: json-schema/Entity.json
 common:
-  - type: GettingStarted
-    url: https://developers.google.com/knowledge-graph/how-tos/search-widget
-  - type: Pricing
+  - type: Portal
     url: https://developers.google.com/knowledge-graph
+  - type: Getting Started
+    url: https://developers.google.com/knowledge-graph/how-tos/search-widget
+  - type: Documentation
+    url: https://developers.google.com/knowledge-graph
+  - type: Authentication
+    url: https://developers.google.com/knowledge-graph/how-tos/authorizing
+  - type: Terms of Service
+    url: https://developers.google.com/terms
+  - type: Privacy Policy
+    url: https://policies.google.com/privacy
+  - type: Status
+    url: https://status.cloud.google.com/
+  - type: Support
+    url: https://developers.google.com/knowledge-graph/support
   - type: JSON-LD
     url: json-ld/context.jsonld
 maintainers:
