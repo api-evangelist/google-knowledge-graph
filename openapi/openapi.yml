@@ -16,7 +16,7 @@ paths:
   /entities:search:
     get:
       operationId: searchEntities
-      summary: Search Entities
+      summary: Google Knowledge Graph Search Search Entities
       description: >-
         Searches the Knowledge Graph for entities that match the given
         constraints.
