@@ -13,12 +13,12 @@ modified: '2026-03-16'
 specificationVersion: '0.19'
 type: Index
 tags:
-  - Knowledge Graph
   - Entities
-  - Semantic Search
+  - Google
+  - Knowledge Graph
   - Linked Data
   - Schema.org
-  - Google
+  - Semantic Search
 apis:
   - name: Google Knowledge Graph Search API
     description: >-
@@ -28,8 +28,8 @@ apis:
     humanURL: https://developers.google.com/knowledge-graph
     baseURL: https://kgsearch.googleapis.com/v1
     tags:
-      - Knowledge Graph
       - Entities
+      - Knowledge Graph
       - Search
     properties:
       - type: Documentation

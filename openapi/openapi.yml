@@ -77,6 +77,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SearchResponse'
+      tags:
+        - Entities:search
 components:
   securitySchemes:
     ApiKeyAuth:
@@ -150,3 +152,5 @@ components:
           description: The official website URL for the entity.
 security:
   - ApiKeyAuth: []
+tags:
+  - name: Entities:search
