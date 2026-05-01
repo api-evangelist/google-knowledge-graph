@@ -9,7 +9,7 @@ description: >-
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-knowledge-graph/refs/heads/main/apis.yml
 created: '2026-03-13'
-modified: '2026-03-16'
+modified: '2026-04-28'
 specificationVersion: '0.19'
 type: Index
 tags:
@@ -42,6 +42,8 @@ apis:
         url: https://developers.google.com/knowledge-graph/how-tos/search-widget
       - type: JSONSchema
         url: json-schema/Entity.json
+      - type: Spectral Rules
+        url: rules/google-knowledge-graph-spectral-rules.yml
 common:
   - type: Portal
     url: https://developers.google.com/knowledge-graph
