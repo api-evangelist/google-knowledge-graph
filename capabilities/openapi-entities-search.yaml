@@ -1,0 +1,124 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Knowledge Graph Search API — Entities:search
+  description: 'Google Knowledge Graph Search API — Entities:search. 1 operations. Lead operation: Google Knowledge Graph
+    Search Search Entities. Self-contained Naftiko capability covering one Google Knowledge Graph business surface.'
+  tags:
+  - Google Knowledge Graph
+  - Entities:search
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_KNOWLEDGE_GRAPH_API_KEY: GOOGLE_KNOWLEDGE_GRAPH_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-entities-search
+    baseUri: https://kgsearch.googleapis.com/v1
+    description: Google Knowledge Graph Search API — Entities:search business capability. Self-contained, no shared references.
+    resources:
+    - name: entities:search
+      path: /entities:search
+      operations:
+      - name: searchentities
+        method: GET
+        description: Google Knowledge Graph Search Search Entities
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: key
+          in: query
+          type: string
+          description: API key.
+          required: true
+        - name: query
+          in: query
+          type: string
+          description: A literal string to search for in the Knowledge Graph.
+        - name: ids
+          in: query
+          type: array
+          description: A list of entity IDs to search for.
+        - name: languages
+          in: query
+          type: array
+          description: The list of language codes (ISO 639) to run the query with.
+        - name: types
+          in: query
+          type: array
+          description: Restricts returned entities to those of the specified types.
+        - name: limit
+          in: query
+          type: integer
+          description: Limits the number of entities returned (max 500, default 20).
+        - name: prefix
+          in: query
+          type: boolean
+          description: Enables prefix (substring) matching against entity names and aliases.
+        - name: indent
+          in: query
+          type: boolean
+          description: Enables indenting of JSON results.
+    authentication:
+      type: apikey
+      key: key
+      value: '{{env.GOOGLE_KNOWLEDGE_GRAPH_API_KEY}}'
+      placement: query
+  exposes:
+  - type: rest
+    namespace: openapi-entities-search-rest
+    port: 8080
+    description: REST adapter for Google Knowledge Graph Search API — Entities:search. One Spectral-compliant resource per
+      consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/entities-search
+      name: entities-search
+      description: REST surface for entities:search.
+      operations:
+      - method: GET
+        name: searchentities
+        description: Google Knowledge Graph Search Search Entities
+        call: openapi-entities-search.searchentities
+        with:
+          key: rest.key
+          query: rest.query
+          ids: rest.ids
+          languages: rest.languages
+          types: rest.types
+          limit: rest.limit
+          prefix: rest.prefix
+          indent: rest.indent
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-entities-search-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Knowledge Graph Search API — Entities:search. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: google-knowledge-graph-search-search
+      description: Google Knowledge Graph Search Search Entities
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-entities-search.searchentities
+      with:
+        key: tools.key
+        query: tools.query
+        ids: tools.ids
+        languages: tools.languages
+        types: tools.types
+        limit: tools.limit
+        prefix: tools.prefix
+        indent: tools.indent
+      outputParameters:
+      - type: object
+        mapping: $.
