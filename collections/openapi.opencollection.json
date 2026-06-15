@@ -1,0 +1,87 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Knowledge Graph Search API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "key",
+      "value": "{{key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Entities:search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Knowledge Graph Search Search Entities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kgsearch.googleapis.com/v1/entities:search",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "API key."
+              },
+              {
+                "name": "query",
+                "value": "",
+                "type": "query",
+                "description": "A literal string to search for in the Knowledge Graph."
+              },
+              {
+                "name": "ids",
+                "value": "",
+                "type": "query",
+                "description": "A list of entity IDs to search for."
+              },
+              {
+                "name": "languages",
+                "value": "",
+                "type": "query",
+                "description": "The list of language codes (ISO 639) to run the query with."
+              },
+              {
+                "name": "types",
+                "value": "",
+                "type": "query",
+                "description": "Restricts returned entities to those of the specified types."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Limits the number of entities returned (max 500, default 20)."
+              },
+              {
+                "name": "prefix",
+                "value": "",
+                "type": "query",
+                "description": "Enables prefix (substring) matching against entity names and aliases."
+              },
+              {
+                "name": "indent",
+                "value": "",
+                "type": "query",
+                "description": "Enables indenting of JSON results."
+              }
+            ]
+          },
+          "docs": "Searches the Knowledge Graph for entities that match the given constraints."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
