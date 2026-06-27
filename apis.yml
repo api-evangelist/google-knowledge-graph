@@ -39,7 +39,7 @@ apis:
         url: https://developers.google.com/knowledge-graph/how-tos/search-widget
       - type: JSONSchema
         url: json-schema/Entity.json
-      - type: Spectral Rules
+      - type: SpectralRules
         url: rules/google-knowledge-graph-spectral-rules.yml
 common:
   - type: Portal
