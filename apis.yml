@@ -42,6 +42,12 @@ apis:
       - type: SpectralRules
         url: rules/google-knowledge-graph-spectral-rules.yml
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-knowledge-graph-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-knowledge-graph-domain-security.yml
+  - type: Authentication
+    url: authentication/google-knowledge-graph-authentication.yml
   - type: Portal
     url: https://developers.google.com/knowledge-graph
   - type: GettingStarted
