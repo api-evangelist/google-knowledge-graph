@@ -42,6 +42,8 @@ apis:
       - type: SpectralRules
         url: rules/google-knowledge-graph-spectral-rules.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/google-knowledge-graph-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/google-knowledge-graph-vulnerability-disclosure.yml
   - type: DomainSecurity
