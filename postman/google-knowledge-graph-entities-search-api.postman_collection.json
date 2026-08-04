@@ -1,0 +1,216 @@
+{
+  "info": {
+    "_postman_id": "bafb34bf-18e0-4cff-8c5b-7194140f20e3",
+    "name": "Google Knowledge Graph Search Entities:search API",
+    "description": "The Google Knowledge Graph Search API allows developers to search for entities (people, places, things) in the Google Knowledge Graph and retrieve structured data about them in JSON-LD format conforming to schema.org standards.\n\nContact Support:\n Name: Google",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:49:16.000Z",
+    "updatedAt": "2026-07-28T01:49:16.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-bafb34bf-18e0-4cff-8c5b-7194140f20e3"
+  },
+  "item": [
+    {
+      "name": "entities:search",
+      "item": [
+        {
+          "name": "Google Knowledge Graph Search Search Entities",
+          "id": "83c95e61-25e5-404e-8f96-90a3205e4ac7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/entities:search?key=<string>&query=<string>&ids=<string>&ids=<string>&languages=<string>&languages=<string>&types=<string>&types=<string>&limit=20&prefix=<boolean>&indent=<boolean>",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "entities:search"
+              ],
+              "query": [
+                {
+                  "description": "(Required) API key.",
+                  "key": "key",
+                  "value": "<string>"
+                },
+                {
+                  "description": "A literal string to search for in the Knowledge Graph.",
+                  "key": "query",
+                  "value": "<string>"
+                },
+                {
+                  "description": "A list of entity IDs to search for.",
+                  "key": "ids",
+                  "value": "<string>"
+                },
+                {
+                  "description": "A list of entity IDs to search for.",
+                  "key": "ids",
+                  "value": "<string>"
+                },
+                {
+                  "description": "The list of language codes (ISO 639) to run the query with.",
+                  "key": "languages",
+                  "value": "<string>"
+                },
+                {
+                  "description": "The list of language codes (ISO 639) to run the query with.",
+                  "key": "languages",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Restricts returned entities to those of the specified types.",
+                  "key": "types",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Restricts returned entities to those of the specified types.",
+                  "key": "types",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Limits the number of entities returned (max 500, default 20).",
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "description": "Enables prefix (substring) matching against entity names and aliases.",
+                  "key": "prefix",
+                  "value": "<boolean>"
+                },
+                {
+                  "description": "Enables indenting of JSON results.",
+                  "key": "indent",
+                  "value": "<boolean>"
+                }
+              ]
+            },
+            "description": "Searches the Knowledge Graph for entities that match the given constraints."
+          },
+          "response": [
+            {
+              "id": "50b15526-2ffa-4804-9cc6-e805620cee70",
+              "name": "Successful response",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/entities:search?key=<API Key>&query=<string>&ids=<string>&languages=<string>&types=<string>&limit=20&prefix=<boolean>&indent=<boolean>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "entities:search"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) API key.",
+                      "key": "key",
+                      "value": "<API Key>"
+                    },
+                    {
+                      "description": "A literal string to search for in the Knowledge Graph.",
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "A list of entity IDs to search for.",
+                      "key": "ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "The list of language codes (ISO 639) to run the query with.",
+                      "key": "languages",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Restricts returned entities to those of the specified types.",
+                      "key": "types",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Limits the number of entities returned (max 500, default 20).",
+                      "key": "limit",
+                      "value": "20"
+                    },
+                    {
+                      "description": "Enables prefix (substring) matching against entity names and aliases.",
+                      "key": "prefix",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "description": "Enables indenting of JSON results.",
+                      "key": "indent",
+                      "value": "<boolean>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"@context\": {},\n  \"@type\": \"<string>\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"<string>\",\n      \"result\": {\n        \"@id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"@type\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"description\": \"<string>\",\n        \"image\": {\n          \"contentUrl\": \"<uri>\",\n          \"url\": \"<uri>\"\n        },\n        \"detailedDescription\": {\n          \"articleBody\": \"<string>\",\n          \"url\": \"<uri>\",\n          \"license\": \"<uri>\"\n        },\n        \"url\": \"<uri>\"\n      },\n      \"resultScore\": \"<number>\"\n    },\n    {\n      \"@type\": \"<string>\",\n      \"result\": {\n        \"@id\": \"<string>\",\n        \"name\": \"<string>\",\n        \"@type\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"description\": \"<string>\",\n        \"image\": {\n          \"contentUrl\": \"<uri>\",\n          \"url\": \"<uri>\"\n        },\n        \"detailedDescription\": {\n          \"articleBody\": \"<string>\",\n          \"url\": \"<uri>\",\n          \"license\": \"<uri>\"\n        },\n        \"url\": \"<uri>\"\n      },\n      \"resultScore\": \"<number>\"\n    }\n  ]\n}",
+              "createdAt": "2026-07-28T01:49:16.000Z",
+              "updatedAt": "2026-07-28T01:49:16.000Z",
+              "uid": "35240-50b15526-2ffa-4804-9cc6-e805620cee70"
+            }
+          ],
+          "createdAt": "2026-07-28T01:49:16.000Z",
+          "updatedAt": "2026-07-28T01:49:16.000Z",
+          "uid": "35240-83c95e61-25e5-404e-8f96-90a3205e4ac7"
+        }
+      ],
+      "id": "6290602e-0784-4270-b41f-0eee3e804b86",
+      "createdAt": "2026-07-28T01:49:16.000Z",
+      "updatedAt": "2026-07-28T01:49:16.000Z",
+      "uid": "35240-6290602e-0784-4270-b41f-0eee3e804b86"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "key",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "query",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://kgsearch.googleapis.com/v1"
+    }
+  ]
+}
