@@ -1,0 +1,235 @@
+{
+  "item": [
+    {
+      "id": "d83bdc54-1687-42cc-b4c4-91b81cceb0a4",
+      "name": "Entities:search",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "977eda31-ef36-4d30-bbd7-754f63b7ac72",
+          "name": "Google Knowledge Graph Search Search Entities",
+          "request": {
+            "name": "Google Knowledge Graph Search Search Entities",
+            "description": {
+              "content": "Searches the Knowledge Graph for entities that match the given constraints.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "entities:search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "key",
+                  "value": "<string>",
+                  "description": "(Required) API key."
+                },
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>",
+                  "description": "A literal string to search for in the Knowledge Graph."
+                },
+                {
+                  "disabled": false,
+                  "key": "ids",
+                  "value": "<string>",
+                  "description": "A list of entity IDs to search for."
+                },
+                {
+                  "disabled": false,
+                  "key": "ids",
+                  "value": "<string>",
+                  "description": "A list of entity IDs to search for."
+                },
+                {
+                  "disabled": false,
+                  "key": "languages",
+                  "value": "<string>",
+                  "description": "The list of language codes (ISO 639) to run the query with."
+                },
+                {
+                  "disabled": false,
+                  "key": "languages",
+                  "value": "<string>",
+                  "description": "The list of language codes (ISO 639) to run the query with."
+                },
+                {
+                  "disabled": false,
+                  "key": "types",
+                  "value": "<string>",
+                  "description": "Restricts returned entities to those of the specified types."
+                },
+                {
+                  "disabled": false,
+                  "key": "types",
+                  "value": "<string>",
+                  "description": "Restricts returned entities to those of the specified types."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Limits the number of entities returned (max 500, default 20)."
+                },
+                {
+                  "disabled": false,
+                  "key": "prefix",
+                  "value": "<boolean>",
+                  "description": "Enables prefix (substring) matching against entity names and aliases."
+                },
+                {
+                  "disabled": false,
+                  "key": "indent",
+                  "value": "<boolean>",
+                  "description": "Enables indenting of JSON results."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4a7c1a70-5cb0-4fd1-a985-766db50dd35b",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "entities:search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ids",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "languages",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "languages",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "types",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "types",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    },
+                    {
+                      "key": "prefix",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "indent",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"@context\": {},\n  \"@type\": \"string\",\n  \"itemListElement\": [\n    {\n      \"@type\": \"string\",\n      \"result\": {\n        \"@id\": \"string\",\n        \"name\": \"string\",\n        \"@type\": [\n          \"string\",\n          \"string\"\n        ],\n        \"description\": \"string\",\n        \"image\": {\n          \"contentUrl\": \"https://oiyENdZkoJaVYFbWZTJDcSNBOjfCzBNBK.llraFtPXLKWwKw7QynS0UQWVEjNWDjANPRdY\",\n          \"url\": \"https://oy.xocSY7f2NEdcnDZWxFpTPx--k5Hbu.AoCKD\"\n        },\n        \"detailedDescription\": {\n          \"articleBody\": \"string\",\n          \"url\": \"http://oZYDOHICdZOXDomYfWOqALgvV.eicdCw7hnXllBdJ17z.dDdtEQAokHwJxKftTjlbL8oetRjiApMv\",\n          \"license\": \"http://nmEPMkHGPeQqGHIrVmpeaVdiparKP.gddQixhrtV77Ozo\"\n        },\n        \"url\": \"https://arrEe.ikMHA\"\n      },\n      \"resultScore\": 1826.409001190743\n    },\n    {\n      \"@type\": \"string\",\n      \"result\": {\n        \"@id\": \"string\",\n        \"name\": \"string\",\n        \"@type\": [\n          \"string\",\n          \"string\"\n        ],\n        \"description\": \"string\",\n        \"image\": {\n          \"contentUrl\": \"http://VSNXxMovtFHFJuLTkFQB.lgnEqSglNNI2lRCYqM.ToAt0IJE3yWNBGqPYJbD2HOQPbsb1.QOIs1UyY\",\n          \"url\": \"http://JViJtnoiuAgXuJDrRDZUWgtRGNXrXgdLz.wuZhYnCxyRSk,foO1Yf319Zxebw2q4T\"\n        },\n        \"detailedDescription\": {\n          \"articleBody\": \"string\",\n          \"url\": \"http://sGlrIIDeVoOSzBlYPtOCCSy.zgilP+JAKzuVSHVypdf\",\n          \"license\": \"http://GrogYwkFimiezDIoNZSOgzpHxUWXUCuws.xtIV+xxmc3sSXDaDBvFcLIut\"\n        },\n        \"url\": \"https://xtiu.udrhFgwmHJQVmikDQj8vEbtwSt.e+pymPXrykhU+mWNmsPXbj\"\n      },\n      \"resultScore\": 8336.922095854941\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://kgsearch.googleapis.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "30254c4d-cb60-455f-9813-5bfc0b48e018",
+    "name": "Google Knowledge Graph Search Entities:search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Google Knowledge Graph Search API allows developers to search for entities (people, places, things) in the Google Knowledge Graph and retrieve structured data about them in JSON-LD format conforming to schema.org standards.\n\nContact Support:\n Name: Google",
+      "type": "text/plain"
+    }
+  }
+}
