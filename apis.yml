@@ -4,6 +4,18 @@ description: >-
   The Google Knowledge Graph Search API allows developers to search for entities (people, places, things) in the Google
   Knowledge Graph and retrieve structured data about them in JSON-LD format conforming to schema.org standards. Results
   include names, descriptions, images, and detailed descriptions with relevance scoring.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
