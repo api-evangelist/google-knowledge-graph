@@ -79,18 +79,6 @@ paths:
       - Entities:search
 components:
   schemas:
-    SearchResponse:
-      type: object
-      properties:
-        '@context':
-          type: object
-        '@type':
-          type: string
-          const: ItemList
-        itemListElement:
-          type: array
-          items:
-            $ref: '#/components/schemas/EntitySearchResult'
     Entity:
       type: object
       properties:
@@ -132,6 +120,18 @@ components:
           type: string
           format: uri
           description: The official website URL for the entity.
+    SearchResponse:
+      type: object
+      properties:
+        '@context':
+          type: object
+        '@type':
+          type: string
+          const: ItemList
+        itemListElement:
+          type: array
+          items:
+            $ref: '#/components/schemas/EntitySearchResult'
     EntitySearchResult:
       type: object
       properties:
