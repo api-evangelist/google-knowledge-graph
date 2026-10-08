@@ -66,6 +66,12 @@ apis:
   - type: SpectralRules
     url: rules/google-knowledge-graph-spectral-rules.yml
 common:
+  - type: Plans
+    url: plans/google-knowledge-graph-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/google-knowledge-graph-rate-limits.yml
+  - type: FinOps
+    url: finops/google-knowledge-graph-finops.yml
   - type: Website
     url: https://www.google.com/
   - type: PostmanWorkspace
